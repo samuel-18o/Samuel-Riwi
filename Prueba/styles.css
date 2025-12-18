@@ -1,0 +1,343 @@
+
+:root {
+    --primary: #4CAF4F; /* Verde del diseño */
+    --secondary: #263238; /* Negro azulado */
+    --text-dark: #4D4D4D; /* Texto principal */
+    --text-gray: #717171; /* Texto secundario */
+    --bg-silver: #F5F7FA; /* Fondos grises */
+    --white: #ffffff;
+    --font-main: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+img { 
+    max-width: 100%; 
+    display: block; 
+    height: auto; 
+}
+
+/* Contenedor principal con ancho máximo */
+.container {
+    max-width: 1280px; /* Ancho máximo de 1280px */
+    margin: 0 auto; /* Centra horizontalmente (0 arriba/abajo, auto laterales) */
+    padding: 0 20px; /* Relleno: 0 arriba/abajo, 40px laterales */
+}
+
+.text-primary { 
+    color: var(--primary);
+}
+.text-center { 
+    text-align: center;
+}
+.bg-silver { 
+    background-color: var(--bg-silver); 
+}
+
+.btn {
+    display:inline-block;
+    padding: 10px 20px 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover { 
+    background-color: #388E3C; }
+
+.btn-text {
+    color: var(--primary);
+    margin-right: 20px;
+}
+
+.main-header {
+    background: var(--white);
+    padding: 24px 0;
+    /* Fijo arriba (opcional, pero queda bien) */
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.menu-toggle, .hamburger {
+    display: none;
+}
+
+.grid-2-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.grid-3-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    padding-bottom: 48px;
+}
+
+.grid-tesla {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 48px;
+    padding-bottom: 48px;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 48px auto;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+    color: var(--text-dark);
+}
+
+.section-header p {
+    color: var(--text-gray);
+}
+
+.hero-section {
+    background-color: var(--bg-silver);
+    padding: 64px 0;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    line-height: 76px;
+    margin-bottom: 24px;
+    color: var(--text-dark);
+}
+
+.clients-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.card {
+    background: var(--white);
+    padding: 32px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.card .icon {
+    margin: 0 auto 16px auto;
+    width: 60px;
+}
+
+.stats-section { 
+    background-color: var(--bg-silver); 
+    padding: 64px 0; 
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2x2 grid interno */
+    gap: 32px;
+}
+
+.stat-item { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+}
+
+.stat-item h3 { 
+    font-size: 28px; 
+    color: var(--text-dark); 
+}
+
+.testimonial-section {
+    padding: 32px 0;
+}
+
+.testimonial-image img {
+    border-radius: 8px;
+    width: 90%;
+}
+.quote {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.testimonial-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.cta-title { 
+    font-size: 3rem; 
+    margin-bottom: 2rem; 
+    color: var(--secondary); 
+}
+
+.main-footer {
+    background-color: var(--secondary);
+    color: #F5F7FA;
+    padding: 4rem 0;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr; /* Logo ancho, links normales, input ancho */
+    gap: 2rem;
+}
+.footer-links h4, .footer-input h4 { 
+    margin-bottom: 1.5rem; 
+    color: var(--white); 
+}
+
+.footer-links ul li { 
+    margin-bottom: 0.8rem; 
+    opacity: 0.8; 
+}
+
+.footer-links ul li:hover { 
+    opacity: 1; 
+    text-decoration: underline; 
+}
+
+.input-group {
+    display: flex;
+    background: #3c464c;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.input-group input { 
+    background: transparent; 
+    border: none; 
+    color: white; 
+    padding: 5px; 
+    flex-grow: 1; 
+}
+
+.input-group button { 
+    background: transparent; 
+    border: none; 
+    color: white; 
+    cursor: pointer; 
+}
+
+@media screen and (max-width: 1024px) {
+    .container { padding: 0 30px; }
+    .hero-content h1 { font-size: 2.8rem; }
+    
+    /* El Grid de 3 se ve apretado, lo pasamos a 2 (1 grande y 2 abajo, o solo scroll)
+       Para el examen, mejor simple: Grid de 2 columnas */
+    .grid-3-cols {
+        grid-template-columns: 1fr 1fr; /* Cambia a 2 columnas */
+        justify-items: center;
+    }
+    /* La tercera tarjeta del grid de 3 quedará sola abajo, lo cual está bien */
+}
+
+/* --- TABLET MODO RETRATO (<= 768px) --- */
+@media screen and (max-width: 768px) {
+    
+    /* NAV: Activar Hamburguesa (Checkbox Hack o solo visual) */
+    .nav-links, .nav-buttons {
+        display: none; /* Ocultamos menú PC */
+        /* Si quieres hacerlo funcional con CSS puro:
+           input:checked ~ .nav-links { display: flex; flex-direction: column; ... }
+           Pero para maquetación estática, basta con mostrar el icono */
+    }
+    .hamburger { display: block; font-size: 1.8rem; cursor: pointer; }
+
+    /* LAYOUT: Todo a 1 columna */
+    .grid-2-cols {
+        grid-template-columns: 1fr; /* Colapsar grids */
+        text-align: center;
+        gap: 2rem;
+    }
+
+    /* Ordenar imágenes: Imagen arriba del texto */
+    .hero-image, .feature-image {
+        order: -1; 
+        margin: 0 auto;
+        max-width: 80%;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+        justify-content: center; /* Centrar los items de estadística */
+    }
+    
+    /* Footer a 2 columnas */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* --- CELULAR (<= 480px) --- */
+@media screen and (max-width: 480px) {
+    
+    .hero-content h1 { font-size: 2.2rem; }
+    .cta-title { font-size: 2rem; }
+    
+    /* Grids a 1 columna total */
+    .grid-3-cols, .stats-grid, .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Ajuste de logos clientes para que no se desborden */
+    .clients-logos {
+        justify-content: center;
+        gap: 20px;
+    }
+}
